@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* Tell TailwindCSS v4 to use the .dark class on <html> for dark: variants */
+@variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Tahoma Local';
+  src: url('/fonts/Tahoma.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tahoma Local';
+  src: url('/fonts/Tahoma Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Tahoma Local', Tahoma, sans-serif;
+}
+
+:root {
+  --primary: #bf403a;
+  --secondary: #475569;
+  --tertiary: #914139;
+  --ink: #0f172a;
+  --surface: #ffffff;
+  --surface-alt: #f8fafc;
+  --glow: rgba(191, 64, 58, 0.14);
+}
+
+.dark {
+  --primary: #e06a62;
+  --secondary: #cbd5e1;
+  --tertiary: #f8fafc;
+  --ink: #f8fafc;
+  --surface: #020202;
+  --surface-alt: #0b1016;
+  --glow: rgba(224, 106, 98, 0.2);
+}
+
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+.text-tertiary { color: var(--tertiary); }
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-tertiary { background-color: var(--tertiary); }
+.border-primary { border-color: var(--primary); }
+.border-secondary { border-color: var(--secondary); }
+.border-tertiary { border-color: var(--tertiary); }
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, var(--glow), transparent 32%),
+    radial-gradient(circle at 82% 0%, rgba(145, 65, 57, 0.12), transparent 26%),
+    linear-gradient(180deg, var(--surface) 0%, var(--surface-alt) 100%);
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at top left, var(--glow), transparent 28%),
+    radial-gradient(circle at 82% 0%, rgba(145, 65, 57, 0.16), transparent 24%),
+    linear-gradient(180deg, #020202 0%, #0a0f16 100%);
+}
+
+.card-hover {
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+a,
+button {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    filter 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+a:hover,
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px var(--glow);
+}
+
+.brand-panel {
+  box-shadow: 0 24px 72px rgba(15, 23, 42, 0.12);
+}
+
+.dark .brand-panel {
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.42);
+}
+
+/* Font Awesome duotone SVG fill colors — neutral grayscale */
+.fa-dt-primary { fill: #111827; }
+.dark .fa-dt-primary { fill: #f9fafb; }
+.fa-dt-secondary { fill: #6b7280; opacity: 0.42; }
+.dark .fa-dt-secondary { fill: #d1d5db; opacity: 0.42; }
+
+html, body {
+  overscroll-behavior: none;
+}
+
+html {
+  scroll-padding-top: var(--site-anchor-offset, 8rem);
+}
+
+[id] {
+  scroll-margin-top: var(--site-anchor-offset, 8rem);
+}

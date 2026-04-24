@@ -1,0 +1,23 @@
+Home (The "Protection" Pitch)
+├── Services
+│   ├── Roofing
+│   │   ├── Asphalt Shingles (Standard)
+│   │   ├── Metal Roofing (Coastal/High-Wind Grade)
+│   │   └── Flat Roofing (Torch-on)
+│   ├── Siding
+│   │   ├── James Hardie (Fiber Cement)
+│   │   ├── Vinyl Siding
+│   │   └── Cedar & Natural Wood
+│   └── Gutters & Maintenance
+├── Service Areas (Local SEO Hub)
+│   ├── Courtenay (Crown Isle, Old Orchard)
+│   ├── Comox (Peninsula, Downtown)
+│   ├── Cumberland (The Village)
+│   └── Royston / Union Bay
+├── The "Island Standard" (Knowledge Base)
+│   ├── Salt-Air Corrosion Prevention
+│   ├── 2026 BC Step Code Compliance
+│   └── Moss Mitigation Strategies
+├── Gallery (Case Studies)
+├── About (Our Story & Certifications)
+└── Contact (Interactive Quote Tool)

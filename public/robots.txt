@@ -1,0 +1,6 @@
+# Uncomment when subdomain switches from tmp to www
+# User-agent: *
+# Allow: /
+
+User-agent: *
+Disallow: /

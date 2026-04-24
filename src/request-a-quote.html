@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use Islander Roofing and Siding's quote calculator to get a planning range for roofing, siding, and maintenance projects.">
+    <meta name="keywords" content="quote calculator, roofing quote, siding quote, Islander Roofing and Siding">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en">
+    <title>Request a Quote | Islander Roofing and Siding</title>
+    <meta name="bc-label" content="Request a Quote">
+    <script>
+      (function(){var p=localStorage.getItem('theme-preference');var d=document.documentElement;if(p==='light'){d.classList.remove('dark');}else if(p==='dark'){d.classList.add('dark');}else{if(!window.matchMedia('(prefers-color-scheme: light)').matches){d.classList.add('dark');}}})();
+    </script>
+    <link href="/style.css" rel="stylesheet" />
+</head>
+<body class="font-sans leading-relaxed text-slate-900 dark:text-slate-100">
+
+    <main id="main-content" class="mx-auto max-w-7xl px-4 pb-24 pt-10 sm:px-6 lg:px-8 lg:pb-28 lg:pt-16">
+        <header class="grid gap-8 lg:grid-cols-[1.05fr,0.95fr] lg:items-end">
+            <div class="space-y-6">
+                <span class="inline-flex rounded-full border border-slate-200 bg-white px-4 py-2 text-[10px] font-black uppercase tracking-[0.32em] text-secondary shadow-sm dark:border-slate-800 dark:bg-black">Quote calculator</span>
+                <h1 class="max-w-3xl font-sans text-5xl font-black uppercase leading-[0.92] tracking-tight text-slate-950 dark:text-slate-50 sm:text-6xl lg:text-7xl">Turn a rough scope into a working range.</h1>
+                <p class="max-w-2xl border-l-2 border-slate-300 pl-6 text-base leading-relaxed text-slate-600 dark:border-slate-700 dark:text-slate-300 sm:text-lg">Choose the project type, size, and site profile, then reveal a planning range with your email before we ever book a visit.</p>
+            </div>
+
+            <div class="brand-panel rounded-4xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-black">
+                <div class="space-y-3 rounded-3xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
+                    <div class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">What improves the range</div>
+                    <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">Project type, approximate size, access profile, and any storm or moisture context.</p>
+                </div>
+                <button type="button" data-ui-button="primary" data-ui-modal-open="#scope-guide" class="mt-4 w-full">Open scope guide</button>
+            </div>
+        </header>
+
+        <section class="mt-10 grid gap-5 lg:grid-cols-[1.05fr,0.95fr]" data-ui-estimate-calculator>
+            <div class="rounded-4xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-black sm:p-8">
+                <div class="flex items-center justify-between gap-4">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">Planning tool</span>
+                        <h2 class="mt-3 text-2xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Build the range</h2>
+                    </div>
+                    <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-[10px] font-black uppercase tracking-[0.32em] text-primary dark:border-slate-800 dark:bg-slate-950">Email unlock</span>
+                </div>
+
+                <div class="mt-6 grid gap-4">
+                    <label class="grid gap-2 text-sm font-bold text-slate-900 dark:text-slate-50">
+                        Project type
+                        <select data-ui-estimate-project class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+                            <option value="roof-repair">Roof repair</option>
+                            <option value="roof-replacement" selected>Roof replacement</option>
+                            <option value="siding-replacement">Siding replacement</option>
+                            <option value="maintenance">Seasonal maintenance</option>
+                        </select>
+                    </label>
+
+                    <label class="grid gap-2 text-sm font-bold text-slate-900 dark:text-slate-50">
+                        Approximate size
+                        <div class="grid gap-3 sm:grid-cols-[minmax(0,1fr),12rem]">
+                            <input type="number" min="600" max="6000" step="50" value="2200" data-ui-estimate-size class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+                            <select data-ui-estimate-size-unit class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+                                <option value="sqft" selected>Square feet</option>
+                                <option value="sqm">Square metres</option>
+                            </select>
+                        </div>
+                        <span class="text-xs font-medium uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Switch to square metres if that is how you have the measurement.</span>
+                    </label>
+
+                    <label class="grid gap-2 text-sm font-bold text-slate-900 dark:text-slate-50">
+                        Approximate age of roof and/or siding
+                        <select data-ui-estimate-age class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+                            <option value="unknown" selected>Don't know</option>
+                            <option value="0-5">0-5 years</option>
+                            <option value="6-10">6-10 years</option>
+                            <option value="11-15">11-15 years</option>
+                            <option value="16-20">16-20 years</option>
+                            <option value="21-plus">21+ years</option>
+                        </select>
+                    </label>
+
+                    <label class="grid gap-2 text-sm font-bold text-slate-900 dark:text-slate-50">
+                        Site profile
+                        <select data-ui-estimate-profile class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+                            <option value="standard" selected>Standard access</option>
+                            <option value="steep">Steep / complex roof</option>
+                            <option value="tight">Tight access</option>
+                            <option value="coastal">Coastal exposure</option>
+                        </select>
+                    </label>
+
+                    <label class="grid gap-2 text-sm font-bold text-slate-900 dark:text-slate-50">
+                        Timing
+                        <select data-ui-estimate-timeline class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+                            <option value="planned" selected>Planned project</option>
+                            <option value="soon">Soon, but not urgent</option>
+                            <option value="urgent">Storm or water concern</option>
+                        </select>
+                    </label>
+
+                    <label class="grid gap-2 text-sm font-bold text-slate-900 dark:text-slate-50">
+                        Email
+                        <input type="email" data-ui-estimate-email placeholder="you@example.com" class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+                    </label>
+
+                    <label class="grid gap-2 text-sm font-bold text-slate-900 dark:text-slate-50">
+                        Images
+                        <input type="file" accept="image/*" multiple data-ui-estimate-images class="rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm file:mr-4 file:rounded-full file:border-0 file:bg-slate-950 file:px-4 file:py-2 file:text-[10px] file:font-black file:uppercase file:tracking-[0.24em] file:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:file:bg-slate-50 dark:file:text-slate-950 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+                        <span class="text-xs font-medium uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Photos are stored locally in this browser so your draft is not lost.</span>
+                        <p data-ui-estimate-images-summary class="text-xs font-medium uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">No images uploaded yet.</p>
+                    </label>
+
+                    <label class="grid gap-2 text-sm font-bold text-slate-900 dark:text-slate-50">
+                        Tell us more
+                        <textarea data-ui-estimate-notes rows="5" placeholder="Share anything from the scope guide that would help us quote accurately." class="rounded-3xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black"></textarea>
+                        <span class="text-xs font-medium uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">Use this for access notes, storm context, or anything else we should know.</span>
+                    </label>
+
+                    <button type="button" data-ui-estimate-submit class="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-black uppercase tracking-[0.24em] text-white transition hover:opacity-90">Reveal my range</button>
+
+                    <p data-ui-estimate-status role="status" class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">Add an email to reveal the range.</p>
+                </div>
+            </div>
+
+            <div class="space-y-5">
+                <article class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
+                    <div class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">Estimated range</div>
+                    <div data-ui-estimate-range class="mt-3 text-4xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50 sm:text-5xl">Enter your email to unlock a planning range.</div>
+                    <p data-ui-estimate-summary class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">We use the email to follow up with the next questions before booking a site visit.</p>
+
+                    <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-black">
+                            <div class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">Project</div>
+                            <div data-ui-estimate-project-label class="mt-2 text-lg font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Roof replacement</div>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-black">
+                            <div class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">Site profile</div>
+                            <div data-ui-estimate-profile-label class="mt-2 text-lg font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Standard access</div>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-black">
+                            <div class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">Size</div>
+                            <div data-ui-estimate-size-label class="mt-2 text-lg font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">2200 sq ft</div>
+                        </div>
+                        <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-black">
+                            <div class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">Timing</div>
+                            <div data-ui-estimate-timeline-label class="mt-2 text-lg font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Planned project</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="rounded-[1.75rem] border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-black">
+                    <div class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">Helpful details</div>
+                    <h2 class="mt-3 text-2xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">A better first reply</h2>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">Photos, roof age, siding type, address, and storm context help us narrow the scope quickly after the estimate is unlocked.</p>
+                </article>
+
+                <article class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
+                    <div class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">Direct contact</div>
+                    <h2 class="mt-3 text-2xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Prompt, clear, and local</h2>
+                    <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">Call or email when you need a site visit, and include the neighborhood, surface type, and whether the issue is urgent.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="mt-10 grid gap-5">
+            <div class="rounded-4xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-black sm:p-8">
+                <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-[0.32em] text-secondary">Weather-tech</span>
+                        <h2 class="mt-3 font-sans text-3xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Details that make the estimate believable</h2>
+                    </div>
+                    <p class="max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-300">We build the ballpark around the island conditions that usually change the final scope: wind, salt, moisture, and access.</p>
+                </div>
+
+                <div class="mt-8 grid gap-4 md:grid-cols-3">
+                    <article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
+                        <h3 class="text-xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">High-wind fastening</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">Edge metal, clips, and fasteners are priced for exposed roofs that need stronger hold in gusty conditions.</p>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
+                        <h3 class="text-xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Synthetic underlayment</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">A better underlayment and cleaner transition detailing help the system handle wet-season runoff and valley pressure.</p>
+                    </article>
+                    <article class="rounded-3xl border border-slate-200 bg-slate-50 p-5 dark:border-slate-800 dark:bg-slate-950">
+                        <h3 class="text-xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Ventilation and code</h3>
+                        <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">Ventilation, insulation, and moisture control choices are set up to stay aligned with 2026 BC Building Code expectations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div id="scope-guide" data-ui-modal aria-labelledby="scope-guide-title">
+            <div data-ui-modal-panel>
+                <div class="flex items-start justify-between gap-4">
+                    <div>
+                        <p class="text-[10px] font-mono uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Scope guide</p>
+                        <h2 id="scope-guide-title" class="mt-3 text-2xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">What we need to quote cleanly</h2>
+                    </div>
+                    <button type="button" data-ui-modal-close class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-500 transition-colors hover:border-slate-900 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:text-slate-400 dark:hover:border-slate-50 dark:hover:text-slate-50 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black" aria-label="Close modal">&times;</button>
+                </div>
+
+                <ul class="mt-5 space-y-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                    <li>• Photos from the street, driveway, or deck if available.</li>
+                    <li>• A rough idea of roof age, siding type, and current issues.</li>
+                    <li>• Any access notes, timeline concerns, or storm damage context.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
