@@ -1,0 +1,471 @@
+<script>
+  (function(){var p=localStorage.getItem('theme-preference');var d=document.documentElement;if(p==='light'){d.classList.remove('dark');}else if(p==='dark'){d.classList.add('dark');}else{if(!window.matchMedia('(prefers-color-scheme: light)').matches){d.classList.add('dark');}}})();
+</script>
+
+<div class="bg-white font-sans leading-relaxed text-slate-900 dark:bg-black dark:text-slate-50">
+  <main id="main-content" class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+    <section class="grid gap-6 lg:grid-cols-[0.98fr,1.02fr] lg:items-start">
+      <div class="space-y-6 lg:sticky lg:top-10 lg:self-start">
+        <article class="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-950">
+          <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Estimated range</div>
+          <div data-quote-range class="mt-3 text-4xl font-black uppercase tracking-tight text-slate-950 dark:text-slate-50 sm:text-5xl">Send the request to unlock the range.</div>
+          <p data-quote-summary class="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">The form is posted to the backend first, then the local calculator uses the submitted details to show the range.</p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-black">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Project</div>
+              <div data-quote-project-label class="mt-2 text-lg font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Not set</div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-black">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Site profile</div>
+              <div data-quote-profile-label class="mt-2 text-lg font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Not set</div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-black">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Size</div>
+              <div data-quote-size-label class="mt-2 text-lg font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Not set</div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-black">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Timing</div>
+              <div data-quote-timeline-label class="mt-2 text-lg font-black uppercase tracking-tight text-slate-950 dark:text-slate-50">Not set</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="space-y-4">
+        <div class="rounded-[2rem] border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-black sm:p-6">
+          <form id="custom_userfield_form" enctype="multipart/form-data" action="/request-quote/public_creator_fields/create" accept-charset="UTF-8" method="post" class="grid gap-4">
+            <div class="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Field</div>
+              <label for="project_type" class="block text-sm font-black uppercase tracking-[0.2em] text-slate-900 dark:text-slate-50">Project Type</label>
+              <input id="project_type" type="text" name="creator_model[creator_fields_attributes][3][string_content]" placeholder="Roof replacement" list="project-type-options" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+              <input type="hidden" name="creator_model[creator_fields_attributes][3][html_input_type]" value="text">
+              <input type="hidden" name="creator_model[creator_fields_attributes][3][html_input_label]" value="project_type">
+            </div>
+
+            <div class="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Field</div>
+              <label for="approximate_size" class="block text-sm font-black uppercase tracking-[0.2em] text-slate-900 dark:text-slate-50">Approximate Size</label>
+              <input id="approximate_size" type="text" name="creator_model[creator_fields_attributes][5][string_content]" placeholder="2200" inputmode="decimal" list="approximate-size-options" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+              <input type="hidden" name="creator_model[creator_fields_attributes][5][html_input_type]" value="text">
+              <input type="hidden" name="creator_model[creator_fields_attributes][5][html_input_label]" value="approximate_size">
+            </div>
+
+            <div class="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Field</div>
+              <label for="approximate_size_unit" class="block text-sm font-black uppercase tracking-[0.2em] text-slate-900 dark:text-slate-50">Approximate Size Unit</label>
+              <input id="approximate_size_unit" type="text" name="creator_model[creator_fields_attributes][6][string_content]" placeholder="Square feet" list="size-unit-options" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+              <input type="hidden" name="creator_model[creator_fields_attributes][6][html_input_type]" value="text">
+              <input type="hidden" name="creator_model[creator_fields_attributes][6][html_input_label]" value="approximate_size_unit">
+            </div>
+
+            <div class="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Field</div>
+              <label for="age_of_roofing_siding" class="block text-sm font-black uppercase tracking-[0.2em] text-slate-900 dark:text-slate-50">Age Of Roofing Siding</label>
+              <input id="age_of_roofing_siding" type="text" name="creator_model[creator_fields_attributes][7][string_content]" placeholder="Don't know" list="age-options" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+              <input type="hidden" name="creator_model[creator_fields_attributes][7][html_input_type]" value="text">
+              <input type="hidden" name="creator_model[creator_fields_attributes][7][html_input_label]" value="age_of_roofing_siding">
+            </div>
+
+            <div class="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Field</div>
+              <label for="site_profile" class="block text-sm font-black uppercase tracking-[0.2em] text-slate-900 dark:text-slate-50">Site Profile</label>
+              <input id="site_profile" type="text" name="creator_model[creator_fields_attributes][2][string_content]" placeholder="Standard access" list="site-profile-options" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+              <input type="hidden" name="creator_model[creator_fields_attributes][2][html_input_type]" value="text">
+              <input type="hidden" name="creator_model[creator_fields_attributes][2][html_input_label]" value="site_profile">
+            </div>
+
+            <div class="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Field</div>
+              <label for="timing" class="block text-sm font-black uppercase tracking-[0.2em] text-slate-900 dark:text-slate-50">Timing</label>
+              <input id="timing" type="text" name="creator_model[creator_fields_attributes][8][string_content]" placeholder="Planned project" list="timing-options" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+              <input type="hidden" name="creator_model[creator_fields_attributes][8][html_input_type]" value="text">
+              <input type="hidden" name="creator_model[creator_fields_attributes][8][html_input_label]" value="timing">
+            </div>
+
+            <div class="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Field</div>
+              <label for="images" class="block text-sm font-black uppercase tracking-[0.2em] text-slate-900 dark:text-slate-50">Images</label>
+              <input id="images" type="file" name="creator_model[creator_fields_attributes][4][file]" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm file:mr-4 file:rounded-full file:border-0 file:bg-slate-950 file:px-4 file:py-2 file:text-[10px] file:font-black file:uppercase file:tracking-[0.24em] file:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:file:bg-slate-50 dark:file:text-slate-950 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+              <input type="hidden" name="creator_model[creator_fields_attributes][4][html_input_type]" value="file">
+              <input type="hidden" name="creator_model[creator_fields_attributes][4][html_input_label]" value="images">
+              <p data-quote-images-summary class="text-xs font-medium uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">No images uploaded yet.</p>
+            </div>
+
+            <div class="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Field</div>
+              <label for="more_info" class="block text-sm font-black uppercase tracking-[0.2em] text-slate-900 dark:text-slate-50">More Info</label>
+              <textarea id="more_info" name="creator_model[creator_fields_attributes][9][string_content]" rows="5" placeholder="Share anything else we should know." class="w-full rounded-3xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black"></textarea>
+              <input type="hidden" name="creator_model[creator_fields_attributes][9][html_input_type]" value="textarea">
+              <input type="hidden" name="creator_model[creator_fields_attributes][9][html_input_label]" value="more_info">
+            </div>
+
+            <div class="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-950">
+              <div class="text-[10px] font-black uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Field</div>
+              <label for="email_address" class="block text-sm font-black uppercase tracking-[0.2em] text-slate-900 dark:text-slate-50">Email Address</label>
+              <input id="email_address" type="text" name="creator_model[creator_fields_attributes][0][string_content]" placeholder="you@example.com" inputmode="email" class="w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:bg-black dark:text-slate-50 dark:placeholder:text-slate-500 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+              <input type="hidden" name="creator_model[creator_fields_attributes][0][html_input_type]" value="text">
+              <input type="hidden" name="creator_model[creator_fields_attributes][0][html_input_label]" value="email_address">
+            </div>
+
+            <div class="rounded-3xl border border-slate-200 bg-slate-950 p-4 dark:border-slate-800 dark:bg-slate-50">
+              <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-black uppercase tracking-[0.24em] text-slate-950 transition hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-black dark:text-slate-50 dark:hover:bg-slate-900 dark:focus-visible:ring-slate-950 dark:focus-visible:ring-offset-slate-50">Send the request and calculate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <iframe name="quote-submit-sink" data-quote-submit-sink title="Quote submission sink" aria-hidden="true" tabindex="-1" class="hidden"></iframe>
+
+  <datalist id="project-type-options">
+    <option value="Roof repair"></option>
+    <option value="Roof replacement"></option>
+    <option value="Siding replacement"></option>
+    <option value="Seasonal maintenance"></option>
+  </datalist>
+
+  <datalist id="approximate-size-options">
+    <option value="1600"></option>
+    <option value="2200"></option>
+    <option value="2800"></option>
+    <option value="3500"></option>
+  </datalist>
+
+  <datalist id="size-unit-options">
+    <option value="Square feet"></option>
+    <option value="Square metres"></option>
+  </datalist>
+
+  <datalist id="age-options">
+    <option value="Don't know"></option>
+    <option value="0-5 years"></option>
+    <option value="6-10 years"></option>
+    <option value="11-15 years"></option>
+    <option value="16-20 years"></option>
+    <option value="21+ years"></option>
+  </datalist>
+
+  <datalist id="site-profile-options">
+    <option value="Standard access"></option>
+    <option value="Steep / complex roof"></option>
+    <option value="Tight access"></option>
+    <option value="Coastal exposure"></option>
+  </datalist>
+
+  <datalist id="timing-options">
+    <option value="Planned project"></option>
+    <option value="Soon, but not urgent"></option>
+    <option value="Storm or water concern"></option>
+  </datalist>
+
+  <script>
+    (function () {
+      var PROJECT_LABELS = {
+        'roof-repair': 'Roof repair',
+        'roof-replacement': 'Roof replacement',
+        'siding-replacement': 'Siding replacement',
+        maintenance: 'Seasonal maintenance'
+      };
+
+      var SIZE_UNIT_LABELS = {
+        sqft: 'Square feet',
+        sqm: 'Square metres'
+      };
+
+      var AGE_LABELS = {
+        unknown: "Don't know",
+        '0-5': '0-5 years',
+        '6-10': '6-10 years',
+        '11-15': '11-15 years',
+        '16-20': '16-20 years',
+        '21-plus': '21+ years'
+      };
+
+      var SQUARE_FEET_PER_SQUARE_METRE = 10.7639104167;
+      var PROFILE_MULTIPLIERS = { standard: 1, steep: 1.12, tight: 1.16, coastal: 1.1 };
+      var TIMELINE_MULTIPLIERS = { planned: 1, soon: 1.08, urgent: 1.16 };
+      var ESTIMATE_BANDS = {
+        'roof-repair': { min: 1600, max: 5200, sizeRate: 0.55 },
+        'roof-replacement': { min: 14500, max: 29500, sizeRate: 4.75 },
+        'siding-replacement': { min: 15500, max: 32500, sizeRate: 4.25 },
+        maintenance: { min: 550, max: 2200, sizeRate: 0.18 }
+      };
+
+      var form = document.getElementById('custom_userfield_form');
+      var submitSink = document.querySelector('[data-quote-submit-sink]');
+      var rangeOutput = document.querySelector('[data-quote-range]');
+      var summaryOutput = document.querySelector('[data-quote-summary]');
+      var projectLabel = document.querySelector('[data-quote-project-label]');
+      var profileLabel = document.querySelector('[data-quote-profile-label]');
+      var sizeLabel = document.querySelector('[data-quote-size-label]');
+      var timelineLabel = document.querySelector('[data-quote-timeline-label]');
+      var imagesSummary = document.querySelector('[data-quote-images-summary]');
+
+      var projectInput = document.getElementById('project_type');
+      var sizeInput = document.getElementById('approximate_size');
+      var sizeUnitInput = document.getElementById('approximate_size_unit');
+      var ageInput = document.getElementById('age_of_roofing_siding');
+      var profileInput = document.getElementById('site_profile');
+      var timingInput = document.getElementById('timing');
+      var imagesInput = document.getElementById('images');
+      var notesInput = document.getElementById('more_info');
+      var emailInput = document.getElementById('email_address');
+      var submitButton = form ? form.querySelector('button[type="submit"]') : null;
+
+      if (!form || !submitSink || !rangeOutput || !summaryOutput || !projectInput || !sizeInput || !sizeUnitInput || !ageInput || !profileInput || !timingInput || !imagesInput || !notesInput || !emailInput || !submitButton) {
+        return;
+      }
+
+      var hasSubmitted = false;
+      var isSubmitting = false;
+      var postHeightQueued = false;
+
+      function formatCurrency(value) {
+        return new Intl.NumberFormat('en-CA', {
+          style: 'currency',
+          currency: 'CAD',
+          maximumFractionDigits: 0
+        }).format(value);
+      }
+
+      function formatNumber(value, maximumFractionDigits) {
+        return new Intl.NumberFormat('en-CA', {
+          maximumFractionDigits: maximumFractionDigits
+        }).format(value);
+      }
+
+      function toSquareFeet(value, unit) {
+        if (!Number.isFinite(value)) return 1800;
+        return unit === 'sqm' ? value * SQUARE_FEET_PER_SQUARE_METRE : value;
+      }
+
+      function toSquareMetres(valueInSquareFeet) {
+        if (!Number.isFinite(valueInSquareFeet)) return 0;
+        return valueInSquareFeet / SQUARE_FEET_PER_SQUARE_METRE;
+      }
+
+      function convertMeasurement(value, fromUnit, toUnit) {
+        if (!Number.isFinite(value) || fromUnit === toUnit) return value;
+        if (fromUnit === 'sqm' && toUnit === 'sqft') return value * SQUARE_FEET_PER_SQUARE_METRE;
+        if (fromUnit === 'sqft' && toUnit === 'sqm') return value / SQUARE_FEET_PER_SQUARE_METRE;
+        return value;
+      }
+
+      function formatSizeValue(value, unit) {
+        var normalizedValue = Number.isFinite(value) ? value : 1800;
+        if (unit === 'sqm') {
+          return formatNumber(normalizedValue, 1) + ' sq m - ' + formatNumber(convertMeasurement(normalizedValue, 'sqm', 'sqft'), 0) + ' sq ft';
+        }
+        return formatNumber(normalizedValue, 0) + ' sq ft - ' + formatNumber(toSquareMetres(normalizedValue), 1) + ' sq m';
+      }
+
+      function getEstimate(project, size, profile, timeline) {
+        var band = ESTIMATE_BANDS[project] || ESTIMATE_BANDS['roof-repair'];
+        var profileMultiplier = PROFILE_MULTIPLIERS[profile] || 1;
+        var timelineMultiplier = TIMELINE_MULTIPLIERS[timeline] || 1;
+        var normalizedSize = Number.isFinite(size) ? size : 1800;
+        var sizeDelta = Math.max(normalizedSize - 1600, 0);
+        var min = band.min + sizeDelta * band.sizeRate * 0.7;
+        var max = band.max + sizeDelta * band.sizeRate;
+
+        min *= profileMultiplier * timelineMultiplier;
+        max *= profileMultiplier * timelineMultiplier;
+
+        var roundedMin = Math.round(min / 50) * 50;
+        var roundedMax = Math.round(max / 100) * 100;
+
+        return {
+          min: roundedMin,
+          max: Math.max(roundedMax, roundedMin + 500)
+        };
+      }
+
+      function normalizeProject(value) {
+        var raw = String(value || '').trim().toLowerCase();
+        if (!raw) return 'roof-repair';
+        if (raw === 'roof-repair' || raw === 'roof repair') return 'roof-repair';
+        if (raw === 'roof-replacement' || raw === 'roof replacement') return 'roof-replacement';
+        if (raw === 'siding-replacement' || raw === 'siding replacement') return 'siding-replacement';
+        if (raw === 'maintenance' || raw.includes('seasonal')) return 'maintenance';
+        if (raw.includes('siding') && raw.includes('replacement')) return 'siding-replacement';
+        if (raw.includes('roof') && raw.includes('replacement')) return 'roof-replacement';
+        if (raw.includes('roof') && raw.includes('repair')) return 'roof-repair';
+        return 'roof-repair';
+      }
+
+      function normalizeSizeUnit(value) {
+        var raw = String(value || '').trim().toLowerCase();
+        if (!raw) return 'sqft';
+        if (raw === 'sqm' || raw.includes('square metre') || raw.includes('square meter') || raw.includes('sq m')) return 'sqm';
+        return 'sqft';
+      }
+
+      function normalizeAge(value) {
+        var raw = String(value || '').trim().toLowerCase();
+        if (!raw) return 'unknown';
+        if (raw === 'unknown' || raw.includes('don')) return 'unknown';
+        if (raw.includes('0-5')) return '0-5';
+        if (raw.includes('6-10')) return '6-10';
+        if (raw.includes('11-15')) return '11-15';
+        if (raw.includes('16-20')) return '16-20';
+        if (raw.includes('21+')) return '21-plus';
+        return 'unknown';
+      }
+
+      function normalizeProfile(value) {
+        var raw = String(value || '').trim().toLowerCase();
+        if (!raw) return 'standard';
+        if (raw.includes('steep')) return 'steep';
+        if (raw.includes('tight')) return 'tight';
+        if (raw.includes('coastal')) return 'coastal';
+        return 'standard';
+      }
+
+      function normalizeTimeline(value) {
+        var raw = String(value || '').trim().toLowerCase();
+        if (!raw) return 'planned';
+        if (raw.includes('urgent') || raw.includes('storm') || raw.includes('water')) return 'urgent';
+        if (raw.includes('soon')) return 'soon';
+        return 'planned';
+      }
+
+      function updateImageSummary() {
+        var files = Array.from(imagesInput.files || []);
+        if (!files.length) {
+          imagesSummary.textContent = 'No images uploaded yet.';
+          return;
+        }
+
+        var names = files.map(function (file) { return file.name; }).join(', ');
+        imagesSummary.textContent = files.length + ' image' + (files.length === 1 ? '' : 's') + ' selected: ' + names;
+      }
+
+      function postHeight() {
+        if (postHeightQueued) return;
+        postHeightQueued = true;
+
+        window.requestAnimationFrame(function () {
+          postHeightQueued = false;
+          var height = document.documentElement.scrollHeight;
+          if (window.parent) {
+            window.parent.postMessage({ type: 'iras:quote-form-height', height: height }, '*');
+          }
+        });
+      }
+
+      function isMobileViewport() {
+        return window.matchMedia('(max-width: 767px)').matches;
+      }
+
+      function scrollToQuoteTop() {
+        if (!isMobileViewport()) return;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function render() {
+        var project = normalizeProject(projectInput.value);
+        var sizeUnit = normalizeSizeUnit(sizeUnitInput.value);
+        var rawSize = Number.parseFloat(sizeInput.value);
+        var age = normalizeAge(ageInput.value);
+        var profile = normalizeProfile(profileInput.value);
+        var timeline = normalizeTimeline(timingInput.value);
+        var email = emailInput.value.trim();
+        var size = toSquareFeet(rawSize, sizeUnit);
+        var estimate = getEstimate(project, size, profile, timeline);
+
+        projectLabel.textContent = PROJECT_LABELS[project] || 'Roof repair';
+        profileLabel.textContent = profileInput.value.trim() || 'Standard access';
+        timelineLabel.textContent = timingInput.value.trim() || 'Planned project';
+        sizeLabel.textContent = formatSizeValue(Number.isFinite(rawSize) ? rawSize : 1800, sizeUnit);
+        updateImageSummary();
+
+        if (!hasSubmitted) {
+          rangeOutput.textContent = email ? 'Send the request to reveal the range.' : 'Enter an email, then send the request to reveal the range.';
+          summaryOutput.textContent = 'The backend gets the exact form payload first. After that, the local calculator uses the submitted scope to display the planning range.';
+          submitButton.textContent = 'Send the request and calculate';
+          return;
+        }
+
+        rangeOutput.textContent = formatCurrency(estimate.min) + ' - ' + formatCurrency(estimate.max);
+        summaryOutput.textContent = [
+          'Planning range for ' + (PROJECT_LABELS[project] || 'the project'),
+          'with ' + (profileInput.value.trim() || 'standard access'),
+          (timingInput.value.trim() || 'planned') + ' timeline',
+          age === 'unknown' ? 'age not provided' : 'age ' + (AGE_LABELS[age] || "don't know"),
+          formatSizeValue(Number.isFinite(rawSize) ? rawSize : 1800, sizeUnit),
+          Array.from(imagesInput.files || []).length ? Array.from(imagesInput.files || []).length + ' image' + (Array.from(imagesInput.files || []).length === 1 ? '' : 's') + ' uploaded' : null,
+          notesInput.value.trim() ? 'extra notes included' : null
+        ].filter(Boolean).join(', ') + '.';
+        submitButton.textContent = 'Resend request and refresh range';
+      }
+
+      function finalizeSubmission() {
+        if (!isSubmitting) return;
+        isSubmitting = false;
+        form.removeAttribute('target');
+        submitButton.disabled = false;
+        render();
+        postHeight();
+      }
+
+      function scheduleFinalization() {
+        window.setTimeout(finalizeSubmission, 300);
+      }
+
+      function handleChange() {
+        render();
+        postHeight();
+      }
+
+      imagesInput.addEventListener('change', handleChange);
+      [projectInput, sizeInput, sizeUnitInput, ageInput, profileInput, timingInput, notesInput, emailInput].forEach(function (control) {
+        control.addEventListener('input', handleChange);
+        control.addEventListener('change', handleChange);
+      });
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        if (isSubmitting) {
+          return;
+        }
+
+        if (!emailInput.value.trim()) {
+          emailInput.focus();
+          summaryOutput.textContent = 'Add an email address before sending the request.';
+          rangeOutput.textContent = 'Enter an email, then send the request to reveal the range.';
+          postHeight();
+          return;
+        }
+
+        isSubmitting = true;
+        hasSubmitted = true;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending to backend...';
+        form.target = submitSink.name || 'quote-submit-sink';
+        render();
+        postHeight();
+        scrollToQuoteTop();
+
+        try {
+          submitSink.onload = finalizeSubmission;
+          form.submit();
+          scheduleFinalization();
+        } catch (error) {
+          finalizeSubmission();
+        }
+      });
+
+      if ('ResizeObserver' in window) {
+        new ResizeObserver(postHeight).observe(document.documentElement);
+      } else {
+        window.addEventListener('resize', postHeight);
+      }
+      window.addEventListener('load', postHeight);
+      render();
+      postHeight();
+    })();
+  </script>
+</div>
