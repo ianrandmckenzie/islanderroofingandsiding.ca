@@ -34,7 +34,18 @@ test.describe('site shell', () => {
     await page.goto('/');
 
     const mobileMenu = page.locator('#nav-mobile-menu');
+    const phoneLink = page.locator('[data-mobile-phone]');
+    const mobileBrand = page.locator('[data-mobile-brand]');
     await expect(mobileMenu).toBeHidden();
+    await expect(mobileBrand).toBeVisible();
+    await expect(phoneLink).toBeVisible();
+
+    const brandBox = await mobileBrand.boundingBox();
+    const phoneBox = await phoneLink.boundingBox();
+
+    expect(brandBox).not.toBeNull();
+    expect(phoneBox).not.toBeNull();
+    expect(phoneBox.y).toBeGreaterThan(brandBox.y + brandBox.height - 1);
 
     await page.getByRole('button', { name: /open menu/i }).click();
 
@@ -124,6 +135,8 @@ test.describe('component coverage', () => {
     await expect(page.locator('#site-footer')).toBeVisible();
     await expect(page.getByRole('contentinfo')).toBeVisible();
     await expect(page.getByRole('link', { name: 'Services' }).last()).toBeVisible();
+    await expect(page.locator('#site-footer').getByRole('link', { name: /1 \(778\) 585-7866/i })).toBeVisible();
+    await expect(page.locator('#site-footer').getByRole('link', { name: /contact@islanderroofingandsiding\.ca/i })).toBeVisible();
   });
 
   test('search filtering narrows the knowledge feed and shows the empty state', async ({ page }) => {
@@ -149,9 +162,13 @@ test.describe('component coverage', () => {
   test('contact scope guide opens and closes from the request a quote page', async ({ page }) => {
     await page.goto('/request-a-quote');
 
+    const contactDetails = page.locator('article').filter({ has: page.getByRole('heading', { name: /prompt, clear, and local/i }) });
     const launchModal = page.getByRole('button', { name: /open scope guide/i });
     const modal = page.locator('#scope-guide');
     const closeButton = modal.getByRole('button', { name: /close modal/i });
+
+    await expect(contactDetails.getByRole('link', { name: /call 1 \(778\) 585-7866/i })).toBeVisible();
+    await expect(contactDetails.getByRole('link', { name: /contact@islanderroofingandsiding\.ca/i })).toBeVisible();
 
     await launchModal.click();
     await expect(modal).toBeVisible();

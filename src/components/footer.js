@@ -14,6 +14,14 @@ export function renderFooterHtml() {
         <p class="max-w-xl text-sm leading-6 text-slate-600 dark:text-slate-300">Islander Roofing and Siding builds roof, siding, and maintenance systems for the Mid-Island with details that hold up in salt, wind, and rain.</p>
       </div>
 
+      <div class="space-y-4">
+        <p class="text-sm font-black uppercase tracking-[0.24em] text-slate-900 dark:text-slate-50">Contact</p>
+        <div class="flex flex-col gap-3 text-sm text-slate-600 dark:text-slate-300">
+          <a href="tel:17785857866" class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1.5 font-black uppercase tracking-[0.18em] transition hover:border-slate-950 hover:bg-slate-950 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:hover:border-slate-50 dark:hover:bg-slate-50 dark:hover:text-slate-950 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">1 (778) 585-7866</a>
+          <a href="mailto:contact@islanderroofingandsiding.ca" class="inline-flex items-center rounded-full border border-slate-300 px-3 py-1.5 font-black uppercase tracking-[0.18em] transition hover:border-slate-950 hover:bg-slate-950 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:hover:border-slate-50 dark:hover:bg-slate-50 dark:hover:text-slate-950 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">contact@islanderroofingandsiding.ca</a>
+        </div>
+      </div>
+
       <div>
         <p class="text-sm font-black uppercase tracking-[0.24em] text-slate-900 dark:text-slate-50">Quick links</p>
         <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">

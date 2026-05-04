@@ -34,23 +34,37 @@ export function syncAnchorOffset() {
 
 export function renderNavInnerHtml(currentPath) {
   return `
-    <div class="flex w-full items-center justify-between gap-5 px-4 py-3 sm:px-6 lg:px-8">
-      <a href="/" class="flex min-w-0 items-center gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black">
+    <div class="flex w-full items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8 lg:gap-5">
+      <a href="/" class="flex shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black lg:hidden">
+        <img src="/assets/islander-roofing-and-siding-logo.webp" alt="Islander Roofing and Siding logo" class="w-20 shrink-0 object-contain sm:w-24 lg:w-24">
+      </a>
+
+      <a href="/" class="hidden min-w-0 items-center gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black lg:flex">
         <img src="/assets/islander-roofing-and-siding-logo.webp" alt="Islander Roofing and Siding logo" class="w-20 shrink-0 object-contain sm:w-24 lg:w-24">
         <span class="min-w-0">
-          <span class="block font-sans text-sm font-black uppercase tracking-[0.24em] text-slate-900 dark:text-slate-50">Islander Roofing &amp; Siding</span>
-          <span class="block text-[10px] font-mono uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400">Protection-first exterior systems</span>
+          <span class="block font-sans text-xs md:text-sm font-black uppercase tracking-tight md:tracking-[0.24em] text-slate-900 dark:text-slate-50">Islander Roofing &amp; Siding</span>
+          <span class="hidden text-[10px] font-mono uppercase tracking-[0.32em] text-slate-500 dark:text-slate-400 sm:block">Protection-first exterior systems</span>
         </span>
       </a>
 
-      <a href="tel:17785857866" class="hidden shrink-0 items-center gap-3 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-left transition hover:border-primary hover:bg-white hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-800 dark:bg-black dark:hover:bg-slate-950 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black lg:inline-flex">
+      <div class="min-w-0 flex-1 w-full lg:hidden">
+        <span data-mobile-brand class="block pl-3 font-sans text-xs mt-3 tracking-tight font-black uppercase text-slate-900 dark:text-slate-50">Islander Roofing &amp; Siding</span>
+        <a href="tel:17785857866" data-mobile-phone class="mt-1 inline-block items-center justify-start gap-3 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-left transition hover:border-primary hover:bg-white hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-800 dark:bg-black dark:hover:bg-slate-950 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black sm:px-4">
+          <span class="flex flex-col leading-tight">
+            <span class="text-[9px] font-black uppercase tracking-[0.3em] text-secondary sm:text-[10px]">Call Now</span>
+            <span class="text-[11px] font-black tracking-[0.16em] text-slate-950 dark:text-slate-50 sm:text-sm sm:tracking-[0.18em]">1 (778) 585-7866</span>
+          </span>
+        </a>
+      </div>
+
+      <a href="tel:17785857866" data-desktop-phone class="hidden shrink-0 items-center gap-3 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-left transition hover:border-primary hover:bg-white hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-800 dark:bg-black dark:hover:bg-slate-950 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black lg:inline-flex">
         <span class="flex flex-col leading-tight">
           <span class="text-[10px] font-black uppercase tracking-[0.3em] text-secondary">Call Now</span>
           <span class="text-sm font-black tracking-[0.18em] text-slate-950 dark:text-slate-50">1 (778) 585-7866</span>
         </span>
       </a>
 
-      <div class="flex flex-1 items-center justify-end gap-2 sm:gap-3">
+      <div class="flex shrink-0 items-center justify-end gap-2 sm:gap-3 lg:flex-1">
         <nav aria-label="Primary" class="hidden flex-1 flex-wrap items-center justify-end gap-x-4 gap-y-2 lg:flex">
           ${NAV_ITEMS.map(item => {
             const active = currentPath === item.href || (item.href === '/' && currentPath === '/');
