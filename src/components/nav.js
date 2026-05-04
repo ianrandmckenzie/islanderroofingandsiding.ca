@@ -43,6 +43,13 @@ export function renderNavInnerHtml(currentPath) {
         </span>
       </a>
 
+      <a href="tel:17785857866" class="hidden shrink-0 items-center gap-3 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-left transition hover:border-primary hover:bg-white hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-800 dark:bg-black dark:hover:bg-slate-950 dark:focus-visible:ring-slate-100 dark:focus-visible:ring-offset-black lg:inline-flex">
+        <span class="flex flex-col leading-tight">
+          <span class="text-[10px] font-black uppercase tracking-[0.3em] text-secondary">Call Now</span>
+          <span class="text-sm font-black tracking-[0.18em] text-slate-950 dark:text-slate-50">1 (778) 585-7866</span>
+        </span>
+      </a>
+
       <div class="flex flex-1 items-center justify-end gap-2 sm:gap-3">
         <nav aria-label="Primary" class="hidden flex-1 flex-wrap items-center justify-end gap-x-4 gap-y-2 lg:flex">
           ${NAV_ITEMS.map(item => {

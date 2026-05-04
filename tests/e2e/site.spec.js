@@ -14,6 +14,9 @@ test.describe('site shell', () => {
     await expect(html).toHaveClass(/dark/);
     await expect(page.getByRole('heading', { name: /roofing and siding built for wind, salt, and humidity/i })).toBeVisible();
     await expect(page.getByRole('link', { name: /browse the area hub/i })).toBeVisible();
+    const phoneLink = page.locator('a[href="tel:17785857866"]');
+    await expect(phoneLink).toBeVisible();
+    await expect(phoneLink).toContainText(/call now/i);
     await expect(page.locator('#site-breadcrumbs')).toBeVisible();
     await expect(page.locator('#site-breadcrumbs #theme-toggle')).toBeVisible();
     await expect(page.locator('#site-header #theme-toggle')).toHaveCount(0);
