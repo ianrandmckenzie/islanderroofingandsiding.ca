@@ -16,7 +16,7 @@ This is the live **Islander Roofing and Siding** website, built with Vite + Tail
 ### Build & Deployment
 - Vite builds to `docs/` directory instead of `dist/` for GitHub Pages
 - `emptyOutDir: false` preserves files like `public/CNAME` during builds
-- Domain: `tmp.islanderroofingandsiding.ca` (configured in `public/CNAME`)
+- Domain: `www.islanderroofingandsiding.ca` (configured in `public/CNAME`)
 
 ### TailwindCSS Configuration
 - Uses TailwindCSS v4.x with Vite plugin (`@tailwindcss/vite`)

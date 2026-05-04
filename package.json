@@ -44,7 +44,7 @@
   "bugs": {
     "url": "https://github.com/ianrandmckenzie/com/issues"
   },
-  "homepage": "https://tmp.islanderroofingandsiding.ca",
+  "homepage": "https://www.islanderroofingandsiding.ca",
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "@tailwindcss/vite": "^4.1.10",
